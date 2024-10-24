@@ -1,0 +1,28 @@
+{
+  "name": "mihai-elisei",
+  "version": "1.0.0",
+  "description": "<!--\r **Mihai-Elisei/mihai-elisei** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
+  "main": "index.js",
+  "engines": {
+    "node": "20.18.0",
+    "npm":"10.8.2"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    
+  },
+  "author": "Mihai Elisei",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.7.2",
+    "nodemon": "^3.1.7"
+  }
+}
